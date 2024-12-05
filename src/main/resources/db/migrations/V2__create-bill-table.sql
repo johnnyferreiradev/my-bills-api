@@ -1,0 +1,11 @@
+CREATE TABLE bill (
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    value INTEGER NOT NULL DEFAULT 0,
+    due_date TIMESTAMP NOT NULL,
+    status VARCHAR(100) NOT NULL,
+    paid_at TIMESTAMP DEFAULT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_users FOREIGN KEY (users_id) REFERENCES users (id) ON DELETE CASCADE,
+)
