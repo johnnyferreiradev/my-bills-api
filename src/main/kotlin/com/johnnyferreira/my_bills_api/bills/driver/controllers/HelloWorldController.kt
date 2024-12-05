@@ -1,4 +1,4 @@
-package com.johnnyferreira.my_bills_api.controllers
+package com.johnnyferreira.my_bills_api.bills.driver.controllers
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

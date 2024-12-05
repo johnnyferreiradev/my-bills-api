@@ -1,14 +1,14 @@
-package com.johnnyferreira.my_bills_api.domain.entities
+package com.johnnyferreira.my_bills_api.bills.driven.entities
 
-import com.johnnyferreira.my_bills_api.domain.enums.UserRoleEnum
+import com.johnnyferreira.my_bills_api.bills.domain.enums.UserRoleEnum
 import jakarta.persistence.*
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import java.time.LocalDateTime
 import java.util.UUID
 
+@Entity
 @Table(name = "users")
-@Entity(name = "users")
 data class UserEntity(
     @Id
     @GeneratedValue
