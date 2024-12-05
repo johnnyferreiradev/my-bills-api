@@ -11,7 +11,7 @@ import java.util.UUID
 @Table(name = "users")
 data class UserEntity(
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.UUID)
     val id: UUID = UUID.randomUUID(),
 
     @Column(name = "username", nullable = false, unique = true)

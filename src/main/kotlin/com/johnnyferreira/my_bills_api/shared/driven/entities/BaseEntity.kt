@@ -1,18 +1,13 @@
 package com.johnnyferreira.my_bills_api.shared.driven.entities
 
-import jakarta.persistence.Column
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
-import jakarta.persistence.MappedSuperclass
-import jakarta.persistence.PrePersist
-import jakarta.persistence.PreUpdate
+import jakarta.persistence.*
 import java.time.LocalDateTime
 import java.util.*
 
 @MappedSuperclass
 abstract class BaseEntity(
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.UUID)
     val id: UUID = UUID.randomUUID(),
 
     @Column(name = "created_at", nullable = false, updatable = false)
