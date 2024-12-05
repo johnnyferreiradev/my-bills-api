@@ -1,5 +1,6 @@
 package com.johnnyferreira.my_bills_api.bills.driven.entities
 
+import com.johnnyferreira.my_bills_api.bills.domain.enums.BillStatusEnum
 import com.johnnyferreira.my_bills_api.shared.driven.entities.BaseEntity
 import jakarta.persistence.*
 import java.time.LocalDateTime
@@ -18,9 +19,9 @@ data class BillEntity(
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    val status: String,
+    val status: BillStatusEnum,
 
-    @Column(name = "paid_at")
+    @Column(name = "paid_at", nullable = true)
     val paidAt: LocalDateTime,
 
     @ManyToOne

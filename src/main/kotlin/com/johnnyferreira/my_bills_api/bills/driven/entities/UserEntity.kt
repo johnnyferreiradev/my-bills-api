@@ -14,11 +14,11 @@ data class UserEntity(
     @GeneratedValue
     val id: UUID = UUID.randomUUID(),
 
-    @Column(nullable = false, unique = true)
-    val username: String,
+    @Column(name = "username", nullable = false, unique = true)
+    val userName: String,
 
-    @Column(nullable = false)
-    val password: String,
+    @Column(name = "password", nullable = false)
+    val passWord: String,
 
     @Column(nullable = false, unique = true)
     val email: String,
@@ -45,10 +45,10 @@ data class UserEntity(
     }
 
     override fun getPassword(): String {
-        return password
+        return passWord
     }
 
     override fun getUsername(): String {
-        return username
+        return userName
     }
 }

@@ -3,11 +3,13 @@ package com.johnnyferreira.my_bills_api.shared.driven.entities
 import jakarta.persistence.Column
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.Id
+import jakarta.persistence.MappedSuperclass
 import jakarta.persistence.PrePersist
 import jakarta.persistence.PreUpdate
 import java.time.LocalDateTime
 import java.util.*
 
+@MappedSuperclass
 abstract class BaseEntity(
     @Id
     @GeneratedValue
